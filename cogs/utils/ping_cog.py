@@ -1,3 +1,4 @@
+# latency of the bot.
 import discord
 from discord.ext import commands
 
@@ -10,7 +11,7 @@ class Ping(commands.Cog):
         latency = round(self.bot.latency * 1000)
         
         embed = discord.Embed()
-        embed.title = "Pipipipi!"
+        embed.title = "Pong!"
         
         if latency <= 100:
             embed.description = f"Latency: {latency}ms"

@@ -4,6 +4,7 @@ import discord
 from discord.ext import commands
 import asyncio
 import os
+import datetime
 
 async def start_bot():
     bot = commands.Bot(command_prefix='pip ', intents=discord.Intents.all(), help_command=None)
@@ -31,6 +32,7 @@ async def start_bot():
     @bot.event
     async def on_ready():
         server_count = len(bot.guilds)
+        bot.start_time = datetime.datetime.now()
         activity = discord.Activity(type=discord.ActivityType.listening, name=f'to {server_count} server(s)')
         await bot.change_presence(activity=activity)
         
