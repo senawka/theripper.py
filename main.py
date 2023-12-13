@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-
+# altering will be hella bad; don't do it
 import discord
 from discord.ext import commands
 import asyncio
